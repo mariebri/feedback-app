@@ -1,0 +1,86 @@
+body {
+    background-color: #27064d;
+}
+
+h1 {
+    color: #FFECDA;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    text-align: center;
+    margin-top: 80px;
+}
+
+h2 {
+    color: #FFECDA;
+    text-align: center;
+}
+
+h3 {
+    color: #FFECDA;
+}
+
+button {
+    background-color: #170230;
+    border: none;
+    color: #FFECDA;
+    padding: 12px 16px;
+    display: block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#submit-btn {
+    padding: 10px 12px;
+}
+
+#issues-btn {
+    background-color: #27064d;
+    text-decoration: underline;
+}
+
+#issues-btn:active {
+    color: #dfd4cb;
+}
+
+
+/*Star rating*/
+
+.rate {
+    /*float: left;*/
+    text-align: center;
+    direction: rtl;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+}
+.rate:not(:checked) > label {
+    /*float: right;*/
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
